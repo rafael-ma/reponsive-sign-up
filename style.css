@@ -14,6 +14,7 @@ body {
     color: white;
     font-weight: 500;
     display: flex;
+    justify-content: space-evenly;
     min-height: 100vh;
     min-width: 100vw;
 }
@@ -28,7 +29,7 @@ main {
 
 h1 {
     color: #8880fe;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -82,7 +83,7 @@ label span {
 
 input {
     background: #161923;
-    width: 300px;
+    max-width: 320px;
     height: 50px;
     padding: 0 1.1rem;
     margin-top: .5rem;
@@ -119,7 +120,7 @@ input:focus {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    padding: 4rem;
+    padding: 3rem;
 }
 
 .images img {
@@ -135,4 +136,54 @@ input:focus {
     background: linear-gradient(45deg, #e8cbc0, #636fa4);
     clip-path: circle(35% at 95% 80%);
     z-index: -1;
+}
+
+@media screen and (min-width:1200px) {
+    .circle {
+        clip-path: circle(20% at 95% 80%);
+    }
+
+    .images img {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width:900px) and (max-width: 1200px) {
+    .circle {
+        clip-path: circle(30% at 95% 80%);
+    }
+
+    .images img {
+        width: 110%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    main {
+        width: 100vw;
+    }
+
+    .images {
+        display: none;
+    }
+
+    .alternative {
+        font-size: .8rem;
+    }
+
+    input {
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    label span,
+    .button {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    h1 {
+        font-size: 1.8rem;
+    }   
 }
